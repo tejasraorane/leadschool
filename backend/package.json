@@ -4,6 +4,7 @@
   "description": "LeadSchool Full Stack Developer Test",
   "main": "server.js",
   "scripts": {
+    "start": "node ./src/bin/server",
     "clean": "rimraf logs",
     "lint": "node_modules/.bin/eslint --fix ./src",
     "watch": "node_modules/.bin/nodemon --config ./nodemon.json ./src/bin/server",

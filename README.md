@@ -1,5 +1,10 @@
-# leadschool
+# LeadSchool
 LeadSchool Test
+
+## Heroku URL 
+```sh
+https://fierce-savannah-25683.herokuapp.com/
+```
 
 ## Installation
 

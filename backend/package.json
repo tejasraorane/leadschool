@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "LeadSchool Full Stack Developer Test",
+  "main": "server.js",
+  "scripts": {
+    "clean": "rimraf logs",
+    "lint": "node_modules/.bin/eslint --fix ./src",
+    "watch": "node_modules/.bin/nodemon --config ./nodemon.json ./src/bin/server",
+    "test": "cross-env NODE_ENV=test node_modules/.bin/mocha",
+    "postinstall": "npm run lint"
+  },
+  "author": "Tejas P Raorane",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "express-swagger-generator": "^1.1.17",
+    "express-winston": "^4.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "path-to-regexp": "^6.1.0",
+    "pg": "^8.2.1",
+    "rimraf": "^3.0.2",
+    "sequelize": "^5.21.11",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^5.5.1"
+  }
+}

@@ -1,0 +1,62 @@
+<p-toast [style]="{ marginTop: '80px' }" position="top-right" life="1500"></p-toast>
+<div class="pt-5">
+    <div class="row pl-5 pr-5">
+        <div class="col m-auto">
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="commonFilter" placeholder="Search by Name, Author">
+                <div class="input-group-btn">
+                <button class="btn btn-default" type="button" (click)="listCourses()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-5 m-auto"></div>
+        <div class="col m-auto">
+            <div class="input-group">
+                <input type="text" class="form-control" [(ngModel)]="categoryFilter" placeholder="Search by Category">
+                <div class="input-group-btn">
+                <button class="btn btn-default" type="button" (click)="listCourses()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 m-auto">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Sno</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Difficulty Level</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Popularity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let course of courses;let i = index;">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{ course.name }}</td>
+                        <td>{{ course.difficulty_level }}</td>
+                        <td>{{ course.categories | categories }}</td>
+                        <td>{{ course.author }}</td>
+                        <td>{{ course.popularity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-right mr-5" (click)="next()">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-primary float-right mr-3" (click)="previous()" *ngIf="page > 1">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>

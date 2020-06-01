@@ -8,8 +8,7 @@
     "clean": "rimraf logs",
     "lint": "node_modules/.bin/eslint --fix ./src",
     "watch": "node_modules/.bin/nodemon --config ./nodemon.json ./src/bin/server",
-    "test": "cross-env NODE_ENV=test node_modules/.bin/mocha",
-    "postinstall": "npm run lint"
+    "test": "cross-env NODE_ENV=test node_modules/.bin/mocha"
   },
   "author": "Tejas P Raorane",
   "license": "ISC",
